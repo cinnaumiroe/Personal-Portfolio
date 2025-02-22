@@ -7,66 +7,36 @@
 
 body {
     height: 100vh;
-    background: url("./Assets/MyBackground.jpg") no-repeat center/ cover;
-    padding: 50px 5%;
+    width: 100%;
+    background: url("./Assets/MyBackground2.jpg") no-repeat center/ cover;
+    padding:0;
     display: flex;
     flex-direction: column;
     background-attachment: fixed;
 }
 
-.container {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    background: rgba(121, 150, 163, .2);
-    border: 2px solid rgba(121, 150, 163, .3);
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    transform: scale(0);
-    animation: zoom-in 1.8s ease forwards;
-}
-
-@keyframes zoom-in {
-    100% {
-        transform: scale(1);
-    }
-}
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.animated {
-    transform: translateY(30px);
-    opacity: 0;
-    animation: slide-in 1s ease forwards;
-    animation-delay: 1s;
-}
-
-@keyframes slide-in {
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 .logo {
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
     text-decoration: none;
     font-weight: 600;
 }
+
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding: 35px 65px;
+    color: #fff;
+}
+
 
 .navbar a{
     font-size: 18px;
@@ -86,22 +56,37 @@ header {
     align-items: center;
     height: 100%;
     gap: 50px;
-    padding: 50px 5px 0;
+    padding: 40px ;
     color: #fff;
+}
+
+.container {
+
+}
+
+.home-container{
+    margin: auto;
+    max-width: 50%;
+    text-align: center;
 }
 
 .home-detail h1 {
     font-size: 55px;
     line-height: 1;
+    color: #fff;
 
 }
 
 .home-detail h2 {
     font-size: 32px;
+    color: #fff;
     
 }
 .home-detail p {
+    font-size: 15px;
+    letter-spacing: 2px;
     margin: 10px 0 20px;
+    color: #fff;
 }
 
 .home-detail .social-icons a {
