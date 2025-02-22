@@ -45,10 +45,12 @@ body {
     font-weight: 500;
     margin-left: 35px;
     border-bottom: 2px solid transparent;
+    transition: all 0.5s ease-in-out;
 }
 
 .navbar a:hover{
-    border-color:#fff;
+    text-shadow: 2px 2px 4px #fff;
+    color: #fff;
 }
 
 .home {
@@ -60,14 +62,18 @@ body {
     color: #fff;
 }
 
-.container {
-
-}
 
 .home-container{
     margin: auto;
     max-width: 50%;
     text-align: center;
+}
+
+.home-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .home-detail h1 {
@@ -77,9 +83,12 @@ body {
 
 }
 
-.home-detail h2 {
+.home-detail .static-txt {
     font-size: 32px;
     color: #fff;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
     
 }
 .home-detail p {
@@ -91,6 +100,7 @@ body {
 
 .home-detail .social-icons a {
     display: inline-flex;
+    align-items: center;
     padding: 8px;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -119,3 +129,74 @@ body {
     object-fit: cover;
     text-align: center;
 }
+
+.wrapper {
+    display: inline-flex;
+    gap: 12px;
+}
+
+.wrapper .static-txt{
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .wrapper .dynamic-txts{
+    /* margin-left: 15px; */
+    /* height: 90px; */
+    /* line-height: 90px; */
+    height: 40px;
+    line-break: 40px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .dynamic-txts li{
+    /* scale: 0.93; */
+    height: 40px;
+    /* container color */
+    background: rgb(128, 27, 77);
+    border-radius: 10px;
+    overflow: hidden;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    list-style: none;
+    /* color: rgb(50, 65, 78); */
+    /* text color */
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+  }
+  @keyframes slide {
+    100%{
+      top: -160px;
+    }
+  }
+  .dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    /* line-height: 90px; */
+    line-height: 40px;
+    white-space: nowrap;
+    padding-left: 20px; 
+    padding-right: 20px;
+  }
+  .dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    /* container color */
+    background: rgb(128, 27, 77);
+    border-left: 2px solid white; 
+    animation: typing 3s steps(10) infinite;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 40px);
+    }
+    100%{
+      left: 0;
+    }
+  }
